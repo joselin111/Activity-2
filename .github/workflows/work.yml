@@ -3,16 +3,16 @@ on:
     branches: [ main ]
 
 jobs:
-  artifact-demo:
+  artifact-work:
     runs-on: ubuntu-latest
     steps:
-      - name: Create a demo file
+      - name: Create a work file
         run: |
-          mkdir -p demo-folder
-          echo "This is for the assignment" > demo-folder/assignment.txt
+          mkdir -p work-directory
+          echo "First in-class" > work-directory/assignment.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: assignment-file
-          path: demo-folder/assignment.txt
+          path: work-directory/assignment.txt
